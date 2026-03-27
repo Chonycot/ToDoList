@@ -51,15 +51,15 @@
     }
 
     &.btn-trash {
-      background-image: url(../images/trash.png);
+      background-image: url('../../../assets/images/trash.png');
     }
 
     &.btn-check {
-      background-image: url(../images/check.png);
+      background-image: url('../../../assets/images/check.png');
     }
 
     &.btn-uncheck {
-      background-image: url(../images/uncheck.png);
+      background-image: url('../../../assets/images/uncheck.png');
     }
   }
 }

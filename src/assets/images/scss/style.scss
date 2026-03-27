@@ -1,17 +1,12 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  background-color: #edf0f1;
+  padding: 50px 0 0 0;
   font-family: 'Roboto', sans-serif;
-  background: #f0f2f5;
-  color: #1e1e2f;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.429;
+  color: black;
 }

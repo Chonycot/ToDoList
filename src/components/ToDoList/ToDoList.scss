@@ -1,30 +1,69 @@
 .todo-container {
+  width: 100%;
+  padding: 15px;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
 .todo-group {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .group-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #f0f0f0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d8e5e0;
 }
 
 .todo-list {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+
+  &.failed:empty:after {
+    content: 'Нет задач на выполнение';
+  }
+
+  &.failed:after {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+  }
+
+  &.completed {
+    position: relative;
+    padding: 60px 0 0 0;
+  }
+
+  &.completed:empty:after {
+    content: 'Нет выполненых задач';
+  }
+
+  &.completed:before {
+    content: '';
+    width: 150px;
+    height: 1px;
+    background: #d8e5e0;
+    position: absolute;
+    top: 25px;
+    left: calc(50% - 75px);
+  }
+
+  &.completed:after {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+  }
 }

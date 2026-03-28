@@ -6,7 +6,8 @@ export const Form = (props: {createNewToDo: Function}) => {
     const [text, setText] = useState<string>('')
 
 
-    const formSubmit = () => {
+    const formSubmit = (event: React.SyntheticEvent) => {
+        event.preventDefault()
         console.log(text)
         if (text) {
             props.createNewToDo(text)

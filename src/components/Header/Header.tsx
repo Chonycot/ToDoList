@@ -13,10 +13,11 @@ const getActiveClass = ({isActive} : {isActive: boolean}): string => {
                 <NavLink 
                 to="/" 
                 className={getActiveClass}
-                >Home</NavLink>
-                <NavLink to="/todo" className={getActiveClass}>ToDo</NavLink>
-                {/* <a href="/" className={classes.link}>Home</a>
-                <a href="/todo" className={classes.link}>ToDo</a> */}
+                >ToDo</NavLink>
+                <NavLink 
+                to="/list" 
+                className={getActiveClass}
+                >List</NavLink>
             </div>
         </header>
     )

@@ -1,3 +1,9 @@
+import normalize from "styled-normalize";
+import { createGlobalStyle } from "styled-components";
+
+
+export const GlobalStyle = createGlobalStyle`
+${normalize}
 * {
   box-sizing: border-box;
 }
@@ -17,3 +23,5 @@ body {
   align-items: center;
   padding: 20px;
 }
+
+`

@@ -1,12 +1,16 @@
-.todo-list-item__wrapper {
+import styled from 'styled-components'
+
+export const ToDoItem = styled.li`
   width: 100%;
   min-height: 50px;
   font-size: 14px;
   font-weight: 500;
   color: #444;
   line-height: 22px;
+
   display: flex;
   justify-content: space-between;
+  
   background: #fff;
   border-radius: 5px;
   position: relative;
@@ -18,17 +22,19 @@
   &:last-child {
     margin: 0;
   }
-}
+`
 
-.todo-list-item__buttons {
-  width: 100px;
+export const ToDoItemControls = styled.div`
+width: 100px;
   height: 50px;
   display: flex;
+  
   position: absolute;
   top: 0;
   right: 0;
+`
 
-  button {
+export const ToDoItemControl = styled.button<{icon: string}>`
     width: 50px;
     height: 50px;
     background-color: transparent;
@@ -39,8 +45,10 @@
     box-shadow: none;
     outline: none;
     cursor: pointer;
+    background-image: url(${(props) => props.icon});
 
-    &.btn-trash:last-of-type:before {
+
+    :last-of-type:before {
       content: '';
       width: 1px;
       height: 30px;
@@ -49,17 +57,7 @@
       top: 10px;
       left: 0;
     }
+    `
 
-    &.btn-trash {
-      background-image: url('../../../assets/images/trash.png');
-    }
-
-    &.btn-check {
-      background-image: url('../../../assets/images/check.png');
-    }
-
-    &.btn-uncheck {
-      background-image: url('../../../assets/images/uncheck.png');
-    }
-  }
-}
+    export const ToDoItemText = styled.span`
+    `

@@ -1,11 +1,21 @@
 import { Outlet } from "react-router-dom"
 import { Header } from "../components/Header/Header"
+import { GlobalStyle } from "../styles/GlobalStyle"
+import {ThemeProvider} from "styled-components"
+import { themes } from "../styles/themes"
+import { useSelector } from "react-redux"
+import { RootState } from "../store"
 
 export const Layout = () => {
-    return(
+const todoList = useSelector((state: RootState) => state.themeList.theme)
+
+    return (
         <>
-        <Header />
-        <Outlet />
+            <ThemeProvider theme={themes['light']}>
+                <GlobalStyle />
+                <Header />
+                <Outlet />
+            </ThemeProvider>
         </>
     )
 }

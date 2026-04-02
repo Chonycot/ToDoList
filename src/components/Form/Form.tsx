@@ -26,7 +26,7 @@ export const Form = (props: {createNewToDo: Function}) => {
                     type="text" 
                     onChange={(e) => setText(e.target.value)} 
                     />
-                    <FormControl icon='plusIcon'/>
+                    <FormControl icon={plusIcon} />
                 </FormLabel>
             </FormBlock>
         </FormWrapper>

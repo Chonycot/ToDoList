@@ -1,8 +1,10 @@
-import "./Header.scss";
 import classes from './Header.module.scss'
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { toggleThemeAction } from "../../feature/themeList";
 
 export const Header = () => {
+    const dispatch = useDispatch()
 const getActiveClass = ({isActive} : {isActive: boolean}): string => {
     return isActive ? `${classes.active} ${classes.link}` : classes.link
 }
@@ -18,6 +20,10 @@ const getActiveClass = ({isActive} : {isActive: boolean}): string => {
                 to="/list" 
                 className={getActiveClass}
                 >List</NavLink>
+
+                <div className={classes.toggleButton}>
+                    <button onClick={() => dispatch(toggleThemeAction())}>Toggle</button>
+                </div>
             </div>
         </header>
     )
